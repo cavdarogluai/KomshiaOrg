@@ -1,6 +1,7 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 
-const secret = () => process.env.FORM_SECRET || "";
+// Mühür anahtarı: FORM_SECRET, yoksa sunucuya özel DATABASE_URL (ikisi de istemciye gitmez).
+const secret = () => process.env.FORM_SECRET || process.env.DATABASE_URL || "";
 
 export function makeSeal(): string {
   const s = secret();
