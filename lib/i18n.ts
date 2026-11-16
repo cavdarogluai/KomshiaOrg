@@ -17,7 +17,7 @@ type Dict = {
     send: string; sending: string; ok: string; err: string; limit: string; invalid: string;
     consent: string; topics: Record<(typeof TOPICS)[number], string>;
   };
-  privacy: { title: string; sections: { h: string; p: string }[] };
+  privacy: { title: string; sections: { h: string; p: string }[]; controller: { h: string; p: string; link: string } };
   footer: { rights: string; privacy: string; server: string; theme: string; lang: string };
 };
 
@@ -78,6 +78,7 @@ export const dict: Record<Lang, Dict> = {
         { h: "Хостинг", p: "Vercel (Франкфурт) и база данни в Neon (Франкфурт), в ЕС." },
         { h: "Права", p: "Имаш право на достъп, поправка и изтриване (GDPR). Поискай го през формата за контакт." },
       ],
+      controller: { h: "Администратор на данните", p: "Фондация „Комшия“, Бургас, България. Фондацията е в процес на учредяване; регистрационните данни ще бъдат публикувани тук след вписването. До тогава връзката с нас е само чрез формата за контакт.", link: "Към формата за контакт" },
     },
     footer: { rights: "Фондация „Комшия“, Бургас (в процес на учредяване)", privacy: "Поверителност", server: "Хостинг: Vercel (Франкфурт)", theme: "Тъмен/светъл режим", lang: "Език" },
   },
@@ -137,6 +138,7 @@ export const dict: Record<Lang, Dict> = {
         { h: "Hosting", p: "Vercel (Frankfurt) and a Neon database (Frankfurt), within the EU." },
         { h: "Your rights", p: "You have the right to access, correct and delete your data (GDPR). Ask through the contact form." },
       ],
+      controller: { h: "Data controller", p: "Komshia Foundation, Burgas, Bulgaria. The foundation is being established; its registration details will be published here once it is entered in the register. Until then, the only way to reach us is the contact form.", link: "Go to the contact form" },
     },
     footer: { rights: "Komshia Foundation, Burgas (being established)", privacy: "Privacy", server: "Hosting: Vercel (Frankfurt)", theme: "Dark/light mode", lang: "Language" },
   },

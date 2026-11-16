@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { dict, isLang } from "@/lib/i18n";
 
@@ -14,6 +15,7 @@ export default async function Privacy({ params }: { params: Promise<{ lang: stri
   return (
     <div className="wrap" style={{ padding: "48px 16px", maxWidth: 760 }}>
       <h1 style={{ fontSize: 36 }}>{p.title}</h1>
+      <section style={{ padding: "12px 0" }}><h2 style={{ fontSize: 20 }}>{p.controller.h}</h2><p>{p.controller.p}</p><p><Link href={`/${lang}/contact`}>{p.controller.link}</Link></p></section>
       {p.sections.map((s) => <section key={s.h} style={{ padding: "12px 0" }}><h2 style={{ fontSize: 20 }}>{s.h}</h2><p>{s.p}</p></section>)}
     </div>
   );

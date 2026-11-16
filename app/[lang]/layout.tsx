@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     metadataBase: new URL("https://komshia.org"),
     title: { default: `${d.name} · ${d.tag}`, template: `%s · ${d.name}` },
     description: d.hero.lead,
-    alternates: { canonical: `/${lang}`, languages: { bg: "/bg", en: "/en" } },
+    alternates: { canonical: `/${lang}`, languages: { bg: "/bg", en: "/en", "x-default": "/bg" } },
   };
 }
 
