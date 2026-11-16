@@ -1,0 +1,53 @@
+:root {
+  --navy: #1a1c3b; --visne: #5e0f0a; --orman: #2a8c45; --turuncu: #d46945;
+  --kehribar: #c07a12; --murdum: #3b1a33; --acik-murdum: #8e4585;
+  --bg: #f7f5fb; --surface: #ffffff; --ink: #1a1c3b; --muted: #4a4c68; --line: #dcd8e8;
+  --accent: #5e0f0a; --accent-ink: #ffffff; --window: #c07a12; --house: #3b1a33; --house2: #8e4585; --leaf: #2a8c45;
+}
+:root[data-theme="dark"] {
+  --bg: #12132a; --surface: #1d1f44; --ink: #eceaf6; --muted: #b9b6d3; --line: #34376a;
+  --accent: #e08a82; --accent-ink: #1a1c3b; --window: #e0a53a; --house: #b377aa; --house2: #8e4585; --leaf: #5fbf7b;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.65 Georgia, "Iowan Old Style", "Palatino Linotype", serif; }
+h1, h2, h3, .brand, nav, button, label, .tag { font-family: "Trebuchet MS", "Gill Sans", system-ui, sans-serif; }
+a { color: inherit; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+header.top { border-bottom: 1px solid var(--line); background: var(--surface); position: sticky; top: 0; z-index: 5; }
+header.top .wrap { display: flex; align-items: center; gap: 16px; min-height: 60px; flex-wrap: wrap; }
+.brand { font-weight: 700; font-size: 22px; text-decoration: none; color: var(--accent); letter-spacing: .02em; margin-right: auto; }
+nav { display: flex; gap: 18px; flex-wrap: wrap; font-size: 15px; }
+nav a { text-decoration: none; color: var(--muted); padding: 6px 0; }
+nav a:hover, nav a:focus-visible { color: var(--ink); text-decoration: underline; }
+.ctl { display: flex; gap: 8px; }
+.ctl a, .ctl button { font-size: 14px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; background: transparent; color: var(--ink); text-decoration: none; cursor: pointer; }
+.hero { padding: 56px 0 24px; }
+.tag { text-transform: uppercase; letter-spacing: .14em; font-size: 13px; color: var(--muted); margin: 0 0 12px; }
+h1 { font-size: clamp(30px, 5.4vw, 52px); line-height: 1.12; margin: 0 0 18px; max-width: 18ch; }
+.lead { font-size: 19px; color: var(--muted); max-width: 60ch; }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+.btn { display: inline-block; padding: 12px 22px; border-radius: 10px; font-family: "Trebuchet MS", system-ui, sans-serif; font-weight: 700; text-decoration: none; border: 2px solid var(--accent); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); }
+.btn.ghost { color: var(--accent); }
+.street { width: 100%; height: auto; display: block; margin-top: 28px; }
+section { padding: 44px 0; }
+section h2 { font-size: 28px; margin: 0 0 16px; }
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+.card h3 { margin: 0 0 8px; font-size: 18px; }
+.card p { margin: 0; color: var(--muted); font-size: 16px; }
+.card.door { border-top: 6px solid var(--kehribar); }
+.note { border-left: 4px solid var(--kehribar); padding: 8px 16px; background: var(--surface); color: var(--muted); border-radius: 0 10px 10px 0; }
+form { display: grid; gap: 14px; max-width: 560px; }
+label { display: grid; gap: 6px; font-size: 15px; font-weight: 700; }
+input, select, textarea { font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); }
+input:focus-visible, select:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visible { outline: 3px solid var(--turuncu); outline-offset: 2px; }
+textarea { min-height: 140px; resize: vertical; }
+.hp { position: absolute; left: -9999px; height: 0; overflow: hidden; }
+.check { font-weight: 400; font-size: 14px; color: var(--muted); display: flex; gap: 8px; align-items: flex-start; }
+.status { padding: 10px 14px; border-radius: 8px; }
+.status.ok { background: color-mix(in srgb, var(--leaf) 18%, var(--surface)); }
+.status.bad { background: color-mix(in srgb, var(--turuncu) 20%, var(--surface)); }
+footer { border-top: 1px solid var(--line); background: var(--surface); padding: 24px 0; font-size: 14px; color: var(--muted); }
+footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; }
